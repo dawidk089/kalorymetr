@@ -1,0 +1,18 @@
+PWM (power width modulation-modulacja szerokoscia mocy)
+	na wyjsciu otrzymuje sie sygnal prostokatny o sterowanej szerokosci wysokiego/niskiego stanu - w szczegolnosci sterowany jest punkt przejscia z jednego stanu na drugi; sygnal prostokatny jest pobierany z odpowiedniego ZEGARA, porownywany jest z komparatorem analogowym (wewnetrznym), by uzyskac pkt za ktorym sygnal bedzie mial stan przeciwny, wtedy taki wyjsciowy sygnal jest podawany na odpowiedni pin; pkt przejscia mozna ustawic przez odpowiedni rejestr, ktory jest przeliczany z otrzymanych PRECENT; mozna wyroznic kilka trybow (2?), w uzyciu narazie dostarcziny bedzie tryb - MODE o wartosci FAST.
+	
+* use:
+
+/*odpowiedni namespace*/
+CONTROLER::get().PWM( <--zegar--> ).mode( <--mode--> )
+								   .power( <--percent--> )
+								   .unable()
+								   .on();
+
+* posibilities:
+
+-zegar: T0, T1, T1A, T1B, T2
+
+-mode: FAST
+
+-power: /*liczba float; procent mocy; 0-100, 
