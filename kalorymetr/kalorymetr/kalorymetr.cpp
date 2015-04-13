@@ -1,6 +1,11 @@
-/*
- * CPPFile1.cpp
- *
- * Created: 2015-03-26 23:54:46
- *  Author: mcmushroom
- */ 
+
+
+#define F_CPU 11059200UL
+#include <avr/io.h>
+#include <util/delay.h>
+#include <avr/interrupt.h>
+
+int main(void)
+{
+	return 1;
+}
