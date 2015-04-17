@@ -4,5 +4,3 @@
 
 kalorymetr.cpp
 
-modules\all.cpp
-

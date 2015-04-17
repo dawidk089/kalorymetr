@@ -15,19 +15,28 @@
     <AssemblyName>kalorymetr</AssemblyName>
     <Name>kalorymetr</Name>
     <RootNamespace>kalorymetr</RootNamespace>
-    <ToolchainFlavour>
-    </ToolchainFlavour>
+    <ToolchainFlavour>Native</ToolchainFlavour>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
     <CacheFlash>true</CacheFlash>
     <ProgFlashFromRam>true</ProgFlashFromRam>
     <RamSnippetAddress>0x20000000</RamSnippetAddress>
     <UncachedRange />
-    <OverrideVtorValue>
-    </OverrideVtorValue>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
     <BootSegment>2</BootSegment>
     <eraseonlaunchrule>0</eraseonlaunchrule>
     <AsfVersion>3.5.0</AsfVersion>
+    <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
+    <com_atmel_avrdbg_tool_simulator>
+      <ToolOptions xmlns="">
+        <InterfaceProperties>
+        </InterfaceProperties>
+      </ToolOptions>
+      <ToolType xmlns="">com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolNumber xmlns="">
+      </ToolNumber>
+      <ToolName xmlns="">Simulator</ToolName>
+    </com_atmel_avrdbg_tool_simulator>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
@@ -118,29 +127,6 @@
     <Compile Include="kalorymetr.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="modules\all.cpp">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="modules\aliasy.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="modules\aliasy.cpp">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="modules\Pin.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="modules\PWM.h">
-      <SubType>compile</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="modules\Pin.cpp">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="modules\PWM.cpp">
-      <SubType>compile</SubType>
-    </None>
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>
